@@ -9,6 +9,6 @@ scikit-learn==1.2.2
 seaborn==0.12.2
 tensorboard==2.13.0
 torch==2.0.1
-torchsummary=1.5.1
+torchsummary==1.5.1
 torchvision==0.15.2
 tqdm==4.66.1
