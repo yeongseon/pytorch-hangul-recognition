@@ -65,10 +65,11 @@ def generate_hangul_images(label_file, fonts_dir, output_dir):
             drawing = ImageDraw.Draw(image)
             w, h = drawing.textsize(character, font=font)
             drawing.text(
-                ((IMAGE_WIDTH-w)/2, (IMAGE_HEIGHT-h)/2),
+                ((IMAGE_WIDTH / 2, IMAGE_HEIGHT / 2)),
                 character,
                 fill=(255),
-                font=font
+                font=font,
+                anchor='mm'
             )
             file_string = 'hangul_{}.jpeg'.format(total_count)
             file_path = os.path.join(image_dir, file_string)
