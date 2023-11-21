@@ -24,8 +24,8 @@ DEFAULT_OUTPUT_DIR = os.path.join(SCRIPT_PATH, '../image-data')
 DISTORTION_COUNT = 3
 
 # Width and height of the resulting image.
-IMAGE_WIDTH = 32
-IMAGE_HEIGHT = 32
+IMAGE_WIDTH = 64
+IMAGE_HEIGHT = 64
 
 
 def generate_hangul_images(label_file, fonts_dir, output_dir):
@@ -61,8 +61,7 @@ def generate_hangul_images(label_file, fonts_dir, output_dir):
         for font in fonts:
             total_count += 1
             image = Image.new('L', (IMAGE_WIDTH, IMAGE_HEIGHT), color=0)
-            #font = ImageFont.truetype(font, 48)
-            font = ImageFont.truetype(font, 24)
+            font = ImageFont.truetype(font, 48)            
             drawing = ImageDraw.Draw(image)
             w, h = drawing.textsize(character, font=font)
             drawing.text(
